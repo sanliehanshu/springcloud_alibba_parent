@@ -10,6 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>springcloud_alibaba_01_nacosclient</module>
+        <module>springcloud_alibaba_02_users</module>
+        <module>springcloud_alibaba_03_products</module>
     </modules>
 
     <parent>
@@ -21,6 +23,7 @@
     <properties>
         <spring.cloud.version>Hoxton.SR6</spring.cloud.version>
         <spring.cloud.alibaba.version>2.2.1.RELEASE</spring.cloud.alibaba.version>
+        <hutool.version>5.6.5</hutool.version>
     </properties>
 
     <dependencyManagement>
@@ -38,6 +41,14 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.20</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
