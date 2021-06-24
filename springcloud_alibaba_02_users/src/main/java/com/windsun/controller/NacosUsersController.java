@@ -1,8 +1,8 @@
 package com.windsun.controller;
 
+import cn.hutool.core.util.RandomUtil;
 import com.windsun.controller.feignclients.ProductClient;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,6 +27,6 @@ public class NacosUsersController {
     public String user(@RequestParam("id") Integer id){
         String products = productClient.products(id);
         log.info("调用结果："+products);
-        return "user"+products;
+        return "user"+RandomUtil.randomString(5)+products;
     }
 }

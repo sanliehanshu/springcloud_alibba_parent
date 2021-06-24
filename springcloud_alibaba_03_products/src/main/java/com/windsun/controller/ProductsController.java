@@ -1,12 +1,11 @@
 package com.windsun.controller;
 
+import cn.hutool.core.util.RandomUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Random;
 
 /**
  * @ClassName : ProductsController
@@ -24,7 +23,7 @@ public class ProductsController {
 
     @GetMapping("/product")
     public String products(@RequestParam("id") Integer id){
-        log.info("进入商品服务，id：{}",id);
+        log.info("进入商品服务，随机值：{}，id：{}", RandomUtil.randomString(5),id);
         return  "商品服务，id："+id+"，port："+port;
     }
 }

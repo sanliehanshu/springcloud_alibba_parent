@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud_alibaba_03_products</artifactId>
+    <artifactId>springcloud_alibaba_04_configclient</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
