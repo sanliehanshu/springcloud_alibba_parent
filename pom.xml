@@ -13,7 +13,6 @@
         <module>springcloud_alibaba_02_users</module>
         <module>springcloud_alibaba_03_products</module>
         <module>springcloud_alibaba_04_configclient</module>
-        <module>springcloud_alibaba_04_configclient</module>
         <module>springcloud_alibaba_05_sentinel</module>
     </modules>
 
